@@ -1,0 +1,6 @@
+# 주석처리
+
+323-325번 줄
+env.viewer.add_keypress_callback(device.on_press)
+# env.viewer.add_keyup_callback(device.on_release)
+# env.viewer.add_keyrepeat_callback(device.on_press)
