@@ -1,3 +1,11 @@
+'''
+python collect_demonstration.py \
+  --bddl-file /home/choi/LIBERO/libero/libero/bddl_files/libero_object/pick_up_the_alphabet_soup_and_place_it_in_the_basket.bddl \
+  --device keyboard \
+  --robots Panda \
+  --num-demonstration 1
+'''
+
 import argparse
 import cv2
 import datetime
@@ -312,9 +320,9 @@ if __name__ == "__main__":
         device = Keyboard(
             pos_sensitivity=args.pos_sensitivity, rot_sensitivity=args.rot_sensitivity
         )
-        env.viewer.add_keypress_callback("any", device.on_press)
-        env.viewer.add_keyup_callback("any", device.on_release)
-        env.viewer.add_keyrepeat_callback("any", device.on_press)
+        env.viewer.add_keypress_callback(device.on_press)
+        # env.viewer.add_keyup_callback(device.on_release)
+        # env.viewer.add_keyrepeat_callback(device.on_press)
     elif args.device == "spacemouse":
         from robosuite.devices import SpaceMouse
 
