@@ -4,3 +4,31 @@
 env.viewer.add_keypress_callback(device.on_press)
 # env.viewer.add_keyup_callback(device.on_release)
 # env.viewer.add_keyrepeat_callback(device.on_press)
+
+# joystic.py 생성
+조이스틱 매핑
+위치 제어 (로봇 팔 이동)
+
+좌우 움직임 (X축): 조이스틱을 좌우로 기울이기
+앞뒤 움직임 (Y축): 조이스틱을 앞뒤로 기울이기
+상하 움직임 (Z축): 스로틀 레버 (조이스틱 왼쪽에 있는 슬라이더)
+
+회전 제어
+
+Yaw (좌우 회전): 조이스틱 비틀기 (Z축 twist)
+Roll & Pitch: HAT 스위치 (조이스틱 위의 8방향 십자 버튼)
+
+HAT 좌우 → Roll
+HAT 앞뒤 → Pitch
+
+
+
+그리퍼 & 기타
+
+그리퍼 열기/닫기: 트리거 (버튼 0) - 조이스틱 앞쪽 방아쇠 버튼
+
+한 번 누르면 닫힘
+다시 누르면 열림 (토글 방식)
+
+
+리셋: 버튼 2 - 조이스틱 위쪽 버튼
